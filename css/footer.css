@@ -1,0 +1,20 @@
+.page-footer {
+    background-color: var(--basic-beige);
+    padding: 60px 0;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.footer-content {
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--basic-light-dark);
+    text-align: left;
+    opacity: 60%;
+}
+
+@media (min-width: 1200px) {
+    .page-footer {
+        padding-top: 80px;
+    }
+}

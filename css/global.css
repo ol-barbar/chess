@@ -1,0 +1,57 @@
+.page-body {
+  max-width: 1366px;
+  margin: 0;
+  padding: 0;
+  background-color: var(--basic-white);
+  font-family: "Golos Text", sans-serif;
+  color: var(--basic-light-dark);
+  background-color: var(--basic-white);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.main-content {
+  overflow: hidden;
+}
+  
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+  
+.wrapper {
+    width: auto;
+    margin: 0 20px;
+  }
+
+@media (min-width: 768px) {
+  .wrapper {
+    margin: 0 40px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .page-body {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: 1366px) {
+  .page-body {
+    margin: 0 auto;
+  }
+  .wrapper {
+    max-width: 1220px;
+  }
+}

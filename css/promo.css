@@ -1,0 +1,198 @@
+.promo {
+    padding-top: 50px;
+    margin-bottom: 120px;
+}
+
+.promo__info {
+    margin-bottom: 34px;
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 24px;
+}
+
+.promo__content {
+    font-family: "Merriweather", serif;
+    font-size: 28px;
+    line-height: 38px;
+    font-weight: 400;
+    color: var(--basic-light-dark);
+    text-align: left;
+    text-transform: uppercase;
+    margin: 0;
+    position: relative;
+}
+
+.promo__content--accent {
+    color: var(--basic-red);
+}
+
+.promo__content--img-first {
+    width: 335px;
+    height: 213px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%/50%;
+    background:  url("../img/ground.png") no-repeat center bottom/335px 213px, 
+                 url("../img/promo-img-11.jpg") no-repeat center bottom/335px 213px;
+    background-blend-mode: color-burn;
+}
+
+.promo__content--img-last {
+    width: 335px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    background:  url("../img/ground.png") no-repeat center top/375px 420px, 
+                 url("../img/promo-img-33.jpg") no-repeat center top/375px 420px;
+    background-size: contain;
+    background-blend-mode: color-burn;
+}
+
+.promo__img--ellipse {
+    clip-path: ellipse(50% 50% at center);
+}
+
+.promo__table {
+    width: 100%;
+    position: relative;
+}
+
+.table__row {
+    border-collapse: collapse;
+    border-bottom: 2px solid var(--special-grey);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 14px 0;
+}
+
+.table__row:last-child {
+    border-bottom: none;
+}
+
+.table__cell {
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--basic-light-dark);
+    box-sizing: border-box;
+}
+
+.table__cell-name {
+    opacity: 70%;
+}
+
+.table__cell-value {
+    font-weight: 600;
+}
+
+.table__cell-value--wrong {
+    text-decoration: line-through;
+    text-decoration-color: var(--basic-red);
+    padding-right: 10px;
+}
+
+.promo__contact {
+    line-height: 22px;
+    color: var(--basic-blue);
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .promo__info--first {
+        grid-template-columns: 1fr 335px;
+        grid-template-rows: auto auto;
+        row-gap: 0;
+    }
+    .promo__info--last {
+        grid-template-columns: 335px 1fr;
+        grid-template-rows: auto auto;
+    }
+    .promo__content--img-first {
+        margin-left: 0;
+        margin-right: 0;
+        grid-row: span 2;
+    }
+    .promo__content {
+        margin: 0;
+    }
+    .promo__table {
+        grid-column: span 2;
+        height: auto;
+    }
+    .table__row {
+        display: table;
+        width: 100%;
+    }
+    .table__cell {
+        width: 50%;
+        padding: 16px 0;
+
+    }
+    .table__cell-name {
+        border-collapse: collapse;
+        border-right: 2px solid var(--special-grey);
+        padding-right: 16px;
+    }
+    .table__row:first-child .table__cell-name {
+        padding-top: 0;
+    }
+    .table__row:last-child .table__cell-name {
+        padding-bottom: 0;
+    }
+    .table__cell-value {
+        padding-left: 16px;
+    }
+    .table__row:first-child .table__cell-value {
+        padding-top: 0;
+    }
+    .table__row:last-child .table__cell-value {
+        padding-bottom: 0;
+    }
+    .promo__contact {
+        grid-column: span 2;
+    }
+}
+@media (min-width: 992px) {
+    .promo__info--first {
+        grid-template-columns: 1fr 395px;
+        grid-template-rows: auto auto auto;
+        column-gap: 65px
+    }
+    .promo__content--img-first {
+        width: 395px;
+        height: 250px;
+        background-size: 100% 100%, contain;
+        grid-row: span 3;
+    }
+    .promo__content--img-last {
+        grid-row: span 2;
+    }
+    .promo__table {
+        grid-column: span 1;
+        height: auto;
+    }
+}
+@media (min-width: 1200px) {
+    .promo {
+        padding-top: 100px;
+        margin-bottom: 200px;
+    }
+    .promo__content {
+        font-size: 36px;
+        line-height: 49px;
+    }
+    .promo__info--last {
+        grid-template-columns: 474px 1fr;
+        column-gap: 44px;
+        row-gap: 50px;
+    }
+    .promo__content--img-last {
+        width: 474px;
+        height: 527px;
+        grid-row: span 3;
+    }
+    .promo__contact {
+        grid-column: span 1;
+        width: 100%;
+    }
+}
